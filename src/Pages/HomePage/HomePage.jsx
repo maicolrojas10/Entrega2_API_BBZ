@@ -9,23 +9,27 @@ const HomePage = () => {
 
 
   useEffect(() => {
-    fetch('https://dragonball-api.com/api/characters')
+    fetch('https://dragonball-api.com/api/characters?limit=58')
       .then((response) => {
         if (!response.ok) throw new Error('Error en la API');
         return response.json();
       })
       .then((data) => {
-        console.log(data); // Para verificar la estructura de la respuesta
+        
         setCharacters(data.items); // Ajusta según la estructura real de la respuesta
       })
-      .catch((error) => console.error('Hubo un error:', error));
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
   }, []);
 
   return (
     
     <main>
-      
-
+      <div>
+        
+      </div>
+     
       {characters.map((user) => (
         <Link
           to={`/details/${user.id}`}

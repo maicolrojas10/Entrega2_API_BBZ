@@ -1,24 +1,21 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import './CustomCard.css';
 
-const CustomCard = ({ user }) => {
-  return (
-    <Card className="card-container">
+const CustomCard = ({ user, showFullDetails = false }) => {
+  // Si no está en detalles, que sea link a los detalles
+  const content = (
+    <Card className="card-container" style={{ cursor: showFullDetails ? 'default' : 'pointer' }}>
       <div className="card-image">
-        <a href={user.url}>
-           <CardMedia
-          
+        <CardMedia
           component="img"
           image={user.image}
           alt={user.name}
         />
-
-        </a>
-       
       </div>
 
       <CardContent className='card-content'>
@@ -30,23 +27,38 @@ const CustomCard = ({ user }) => {
           {user.race} - {user.gender}
         </Typography>
 
-        <Typography variant="body2" className="card-ki">
-          <h4>Base KI:</h4>
-          {user.ki}
-        </Typography>
+        {showFullDetails && (
+          <>
+          <div className="card-details">
+          <Typography variant="body2" color="gold">
+             <h4>
+             Base Kit: 
+              </h4> 
+              {user.ki}
+            </Typography>
+            <Typography variant="body2" color="gold">
+             <h4>
+              Total Kit:
+             </h4>
+              {user.maxKi}
+            </Typography>
+            <Typography variant="body2" color="Gold">
+            <h4>
+              Afiliacion:
+             </h4>
+             {user.affiliation}
+            </Typography>
 
-        <Typography variant="body2" className="card-ki">
-          <h4>Total KI:</h4>
-          {user.maxKi}
-        </Typography>
 
-        <Typography variant="body2" className="card-affiliation">
-          <h4>Affiliation:</h4>
-          {user.affiliation}
-        </Typography>
+          </div>
+           
+          </>
+        )}
       </CardContent>
     </Card>
   );
+
+  return showFullDetails ? content : <Link to={`/details/${user.id}`} style={{ textDecoration: 'none' }}>{content}</Link>;
 };
 
 export default CustomCard;

@@ -18,7 +18,7 @@ const Header = () => {
                     About
                 </button>
                 <button className='support'>
-                    SUPPORT US
+                    Acerca De
                 </button>
 
             </div>

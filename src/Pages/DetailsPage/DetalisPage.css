@@ -1,0 +1,56 @@
+.gif {
+  background-image: url(../../Img/d093472d2a615d76e56a2e46b014b96543347d3c_hq.gif) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Muestra el GIF completo sin deformarlo */
+  width: 100%;
+  height: 200px; /* Altura controlada */
+  opacity: 0.5; /* Suave, decorativo */
+  position: absolute; /* Para ponerlo detrás */
+  left: -50px;
+  top: 50%; /* Para que quede en la parte superior */
+  filter: blur(2px); /* Desenfoque suave */
+}
+
+.gif:hover {
+  filter: blur(0px); /* Sin desenfoque al pasar el mouse */
+  opacity: 1; /* Más visible al pasar el mouse */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 250px;
+  padding: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.description-cloud {
+  max-width: 400px;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 20px gold;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  position: relative;
+  z-index: 2;
+}
+
+/* Efecto de nube: burbuja con una "colita" */
+.description-cloud::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-right-color: #f30101;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+}
