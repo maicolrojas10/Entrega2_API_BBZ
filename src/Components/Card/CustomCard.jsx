@@ -8,13 +8,20 @@ import './CustomCard.css';
 const CustomCard = ({ user }) => {
   return (
     <Card className="card-container">
-      <CardMedia
-        component="img"
-        image={user.image}
-        alt={user.name}
-        className="card-image"
-      />
-      <CardContent>
+      <div className="card-image">
+        <a href={user.url}>
+           <CardMedia
+          
+          component="img"
+          image={user.image}
+          alt={user.name}
+        />
+
+        </a>
+       
+      </div>
+
+      <CardContent className='card-content'>
         <Typography variant="h6" className="card-title">
           {user.name}
         </Typography>
@@ -24,22 +31,18 @@ const CustomCard = ({ user }) => {
         </Typography>
 
         <Typography variant="body2" className="card-ki">
-          <h4>
-            Base KI:
-          </h4>
+          <h4>Base KI:</h4>
           {user.ki}
         </Typography>
 
         <Typography variant="body2" className="card-ki">
-          <h4>
-            Total KI:
-          </h4>{user.maxKi}
+          <h4>Total KI:</h4>
+          {user.maxKi}
         </Typography>
 
         <Typography variant="body2" className="card-affiliation">
-          <h4>
-            Afiliation
-          </h4> {user.affiliation}
+          <h4>Affiliation:</h4>
+          {user.affiliation}
         </Typography>
       </CardContent>
     </Card>

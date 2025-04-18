@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: rgb(25, 27, 36);
+
+   
 }
 
 main {
@@ -12,5 +13,6 @@ main {
     padding: 20px;
     justify-content: center;
     align-items: center;
+    background-color: #1a1717;
 }
 

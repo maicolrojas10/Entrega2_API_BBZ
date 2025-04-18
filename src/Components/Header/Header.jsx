@@ -6,8 +6,8 @@ const Header = () => {
     return (
         <header>
             <div className='header_img'>
-            <img src={androidIcon} alt="icono android" />
-             
+                <img className="img_header" src={androidIcon} alt="icono android" />
+
             </div>
 
             <div className='header_buttons'>
@@ -22,12 +22,12 @@ const Header = () => {
                 </button>
 
             </div>
-            
+
 
         </header>
 
-        
-        
+
+
     )
 }
 

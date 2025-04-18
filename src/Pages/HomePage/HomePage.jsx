@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-import CustomCard from '../Components/Card/CustomCard'
+import CustomCard from '../../Components/Card/CustomCard'
 
 const HomePage = () => {
   const [characters, setCharacters] = useState([])
@@ -22,7 +22,9 @@ const HomePage = () => {
   }, []);
 
   return (
+    
     <main>
+      
 
       {characters.map((user) => (
         <Link
