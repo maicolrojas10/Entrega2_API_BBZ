@@ -39,8 +39,9 @@ const AcercaDe = () => {
       </div>
 
       <div className="des_Desarrolador">
-       <p>Michael Arturo Rojas Ordoñez</p>
-
+       <p>Desarrollado por:<br />Michael Arturo Rojas Ordoñez</p>
+  
+        <p>Estudiante de Ingeniería en Sistemas </p>
       </div>
       
 

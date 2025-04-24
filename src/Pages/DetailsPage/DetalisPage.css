@@ -1,22 +1,26 @@
+body {
+  background-color: rgb(51, 53, 56);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fbfbfb;
+  margin: 0;
+  padding: 0;
+}
 .gif {
   background-image: url(../../Img/d093472d2a615d76e56a2e46b014b96543347d3c_hq.gif) !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain; /* Muestra el GIF completo sin deformarlo */
   width: 100%;
-  height: 200px; /* Altura controlada */
-  opacity: 0.5; /* Suave, decorativo */
+  height: 100%;
+  opacity: 0.8; /* Suave, decorativo */
   position: absolute; /* Para ponerlo detrás */
-  left: -50px;
-  top: 50%; /* Para que quede en la parte superior */
-  filter: blur(2px); /* Desenfoque suave */
+
+  top: 58%; /* Para que quede en la parte superior */
+ 
+  z-index: -1; /* Para que quede detrás de otros elementos */
+
 }
 
-.gif:hover {
-  filter: blur(0px); /* Sin desenfoque al pasar el mouse */
-  opacity: 1; /* Más visible al pasar el mouse */
-  transition: opacity 0.3s ease; /* Transición suave */
-}
+
 
 .card-wrapper {
   display: flex;

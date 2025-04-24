@@ -1,30 +1,22 @@
 import React from 'react'
 import './Header.css';
 import androidIcon from '../../Img/android-icon-192x192.webp';
+import imgDGb from '../../Img/logo_dragonballapi.webp'
 
 const Header = () => {
     return (
         <header>
-            <div className='header_img'>
-                <img className="img_header" src={androidIcon} alt="icono android" />
 
+
+            <div className='imgLogo'>
+                <img src={imgDGb} alt="" />
+               
             </div>
 
-            <div className='header_buttons'>
-                <button>
-                    Docs
-                </button>
-                <button>
-                    About
-                </button>
-                <button className='support'>
-                    Acerca De
-                </button>
-
-            </div>
 
 
         </header>
+
 
 
 

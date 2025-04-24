@@ -25,10 +25,9 @@ const HomePage = () => {
 
   return (
     
+    
     <main>
-      <div>
-        
-      </div>
+     
      
       {characters.map((user) => (
         <Link

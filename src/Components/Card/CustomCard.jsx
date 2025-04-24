@@ -5,9 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import './CustomCard.css';
+import imgDGb from '../../Img/logo_dragonballapi.webp'
 
 const CustomCard = ({ user, showFullDetails = false }) => {
-  // Si no está en detalles, que sea link a los detalles
+
   const content = (
     <Card className="card-container" style={{ cursor: showFullDetails ? 'default' : 'pointer' }}>
       <div className="card-image">
@@ -19,6 +20,8 @@ const CustomCard = ({ user, showFullDetails = false }) => {
       </div>
 
       <CardContent className='card-content'>
+
+
         <Typography variant="h6" className="card-title">
           {user.name}
         </Typography>
@@ -26,34 +29,34 @@ const CustomCard = ({ user, showFullDetails = false }) => {
         <Typography variant="body2" className="card-subtitle">
           {user.race} - {user.gender}
         </Typography>
+        
+        
+       
+          
+            <div className="card-details">
+              <Typography variant="body2" color="gold">
+                <h4>
+                  Base Kit:
+                </h4>
+                {user.ki}
+              </Typography>
+              <Typography variant="body2" color="gold">
+                <h4>
+                  Total Kit:
+                </h4>
+                {user.maxKi}
+              </Typography>
+              <Typography variant="body2" color="Gold">
+                <h4>
+                  Afiliacion:
+                </h4>
+                {user.affiliation}
+              </Typography>
 
-        {showFullDetails && (
-          <>
-          <div className="card-details">
-          <Typography variant="body2" color="gold">
-             <h4>
-             Base Kit: 
-              </h4> 
-              {user.ki}
-            </Typography>
-            <Typography variant="body2" color="gold">
-             <h4>
-              Total Kit:
-             </h4>
-              {user.maxKi}
-            </Typography>
-            <Typography variant="body2" color="Gold">
-            <h4>
-              Afiliacion:
-             </h4>
-             {user.affiliation}
-            </Typography>
 
+            </div>
 
-          </div>
-           
-          </>
-        )}
+        
       </CardContent>
     </Card>
   );

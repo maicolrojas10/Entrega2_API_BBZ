@@ -1,0 +1,68 @@
+.error-page {
+    min-height: 22vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .error-image {
+    width: 280px;
+    animation: bounce 2s infinite;
+    margin-bottom: 1.5rem;
+  }
+  .error-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #facc15; /* amarillo Saiyajin */
+    
+ 
+  }
+
+  
+  
+  .error-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #facc15; /* amarillo Saiyajin */
+    margin-bottom: 1rem;
+  }
+  
+  .error-text {
+    max-width: 500px;
+    font-size: 1.1rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+  }
+  
+  .error-button {
+    background-color: #facc15;
+    color: #000;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #facc15;
+  }
+  
+  .error-button:hover {
+    background-color: #fde047;
+    box-shadow: 0 0 20px #facc15;
+  }
+  
+  /* Bounce keyframes */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

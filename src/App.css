@@ -3,7 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 
-   
+
+
 }
 
 main {
@@ -13,6 +14,40 @@ main {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    background-color: #1a1717;
+    background-image: url("../src/Img/fondoBody.gif");
+
+
+
 }
 
+.imgLogo {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+}
+
+.imgLogo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:600px; /* o el tamaño que tú quieras */
+    height: auto; /* mantiene proporción */
+    transition: 0.4s ease-in-out;
+}
+
+.imgLogo img:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 15px #d4ff00, 0 0 30px #ff8000;
+    animation: vibrar 0.3s linear infinite;
+}
+
+  /* Animación de vibración */
+@keyframes vibrar {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-50%, -50%) rotate(1deg); }
+    50% { transform: translate(-50%, -50%) rotate(-1deg); }
+    75% { transform: translate(-50%, -50%) rotate(1deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  }
